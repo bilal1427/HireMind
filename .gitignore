@@ -1,0 +1,75 @@
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+.venv/
+env/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Testing / Coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# =========================
+# Uploaded Files
+# =========================
+uploads/*
+!uploads/.gitkeep
+
+# =========================
+# ChromaDB
+# =========================
+chroma_data/*
+!chroma_data/.gitkeep
+
+# =========================
+# ML Generated Files
+# =========================
+*.pkl
+*.joblib
+*.h5
+*.keras
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp
+*.swp
+*.swo
