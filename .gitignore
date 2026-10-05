@@ -1,75 +1,76 @@
-# =========================
-# Environment Variables
-# =========================
-.env
-.env.*
-!.env.example
-
-# =========================
 # Python
-# =========================
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# =========================
-# Virtual Environment
-# =========================
+# Virtual environments
 venv/
-.venv/
+ENV/
 env/
+.venv/
 
-# =========================
-# IDE / Editor
-# =========================
-.vscode/
+# IDE
 .idea/
-*.iml
+.vscode/
+*.swp
+*.swo
+*~
 
-# =========================
-# Testing / Coverage
-# =========================
-.pytest_cache/
-.coverage
-htmlcov/
-.coverage.*
+# Environment variables
+.env
+.env.local
+.env.*.local
 
-# =========================
-# Uploaded Files
-# =========================
-uploads/*
+# Database
+*.db
+*.sqlite3
+
+# Uploads
+uploads/
 !uploads/.gitkeep
 
-# =========================
 # ChromaDB
-# =========================
-chroma_data/*
+chroma_data/
 !chroma_data/.gitkeep
 
-# =========================
-# ML Generated Files
-# =========================
-*.pkl
-*.joblib
-*.h5
-*.keras
+# ML artifacts
+app/ml/artifacts/
+app/ml/models/
+!app/ml/artifacts/.gitkeep
+!app/ml/models/.gitkeep
 
-# =========================
 # Logs
-# =========================
 *.log
 logs/
 
-# =========================
-# OS Files
-# =========================
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# OS
 .DS_Store
 Thumbs.db
 
-# =========================
-# Temporary Files
-# =========================
-*.tmp
-*.temp
-*.swp
-*.swo
+# Build
+*.pyc
+*.pyo
