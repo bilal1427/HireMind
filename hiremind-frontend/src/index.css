@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-200 dark:border-surface-700;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-sans bg-white dark:bg-surface-950 text-surface-700 dark:text-surface-300 antialiased;
+  }
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-surface-900 dark:text-white font-semibold tracking-tight;
+  }
+  ::selection {
+    @apply bg-brand-500/30 text-surface-900 dark:text-white;
+  }
+  input, textarea, select, button {
+    @apply font-sans;
+  }
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-100 dark:bg-surface-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-300 dark:bg-surface-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-surface-400 dark:bg-surface-600;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:border-brand-500;
+  }
+  .card-base {
+    @apply bg-white dark:bg-surface-900 rounded-xl border border-surface-200 dark:border-surface-800 shadow-soft;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors disabled:opacity-50 disabled:pointer-events-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
